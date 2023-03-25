@@ -14,6 +14,7 @@ int execute(char *content, stack_t **stack, unsigned int line_num, FILE *file)
 	instruction_t f_names[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"pint", _pint},
 		{NULL, NULL}
 		};
 	int i;

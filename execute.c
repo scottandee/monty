@@ -16,6 +16,7 @@ int execute(char *content, stack_t **stack, unsigned int line_num, FILE *file)
 		{"pall", _pall},
 		{"pint", _pint},
 		{"pop", _pop},
+		{"swap", _swap},
 		{NULL, NULL}
 		};
 	int i;

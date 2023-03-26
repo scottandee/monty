@@ -8,11 +8,15 @@
 
 void _push(stack_t **stack, unsigned int line_number)
 {
-	int i, flag = 0, n = 0;
+	int i = 0, flag = 0, n = 0;
 
 	if (var.value != NULL)
 	{
-		for (i = 0; var.value[i] != '\0'; i++)
+		if (var.value[0] == "-")
+		{
+			i++;
+		}
+		for (; var.value[i] != '\0'; i++)
 		{
 			if (var.value[i] > 57 || var.value[i] < 48)
 			{

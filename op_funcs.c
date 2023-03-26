@@ -12,7 +12,7 @@ void _push(stack_t **stack, unsigned int line_number)
 
 	if (var.value != NULL)
 	{
-		if (var.value[0] == "-")
+		if (var.value[0] == '-')
 		{
 			i++;
 		}

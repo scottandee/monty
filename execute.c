@@ -29,6 +29,10 @@ int execute(char *content, stack_t **stack, unsigned int line_num, FILE *file)
 	char *op = NULL;
 
 	op = strtok(content, " \n\t\r");
+	if (op && op[0] == '#')
+	{
+		return (0);
+	}
 	var.value = strtok(NULL, " \n\t\r");
 
 	i = 0;

@@ -59,6 +59,14 @@ void _mod(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	temp = *stack;
+	if (temp->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", line_number);
+		fclose(var.file);
+		free(var.content);
+		free_stack(*stack);
+		exit(EXIT_FAILURE);
+	}
 	a = temp->n;
 	b = temp->next->n;
 	temp->next->n = b % a;
